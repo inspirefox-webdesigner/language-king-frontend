@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/language-king-website-new",
-  plugins: [react(),tailwindcss()],
+  base: "/language-king-frontend/",  // 🔥 EXACT repo name
+  plugins: [react(), tailwindcss()],
+  build: {
+    assetsDir: ""  // Windows error fix
+  }
 })
